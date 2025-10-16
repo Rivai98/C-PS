@@ -124,7 +124,7 @@ int main()
 
 
 
-    int n, cnt=0; 
+    /*int n, cnt=0; 
     double number, sum_even = 0, sum_odd = 0, odd_counter = 0, even_counter = 0;
     cin >> n; 
     while (n--) {
@@ -150,9 +150,90 @@ int main()
 
 
 
-    return 0;
+    */
 
 
+//========================================================//
+///========================Medium Challenges===============//
+//Problem #1:
+//Print diamond
+//● Read an integer N, then print diamond of 2N rows as below
+int N; 
+cin >> N; 
+int stars  , spaces , cnt ;
+int row = 1; 
+while (row <= N) {
+    
+    stars = 2 * row - 1;
+    spaces = N - row; 
+    cnt = 1; 
+    while (cnt <= spaces) {
+        cout << ' '; 
+        ++cnt; 
+    }
+
+    cnt = 1; 
+
+    while (cnt <= stars) {
+        cout << "*"; 
+        ++cnt; 
+    }
+
+    row++;
+    cout << "\n"; 
+}
+
+
+while (row > 0 ) {
+
+    stars = 2 * row - 1;
+    spaces = N - row;
+    cnt = 1;
+    while (cnt <= spaces) {
+        cout << ' ';
+        ++cnt;
+    }
+
+    cnt = 1;
+
+    while (cnt <= stars) {
+        cout << "*";
+        ++cnt;
+    }
+
+    row--;
+    cout << "\n";
+}
+
+
+
+
+
+
+
+//========================================================//
+//Problem #2: Special multiples 1
+//● Read an integer N : print all numbers that satisfy the following property
+//○ Either number is divisible by 8
+//○ Or divisible by both 4 and 3
+//● Input : 100
+////● Output : 0 8 12 16 24 32 36 40 48 56 60 64 72 80 84 88 96
+//int number , cnt =-1 ; 
+//cin >> number; 
+//while (cnt <= number) {
+//    cnt++; 
+//    if (cnt % 8 == 0  ) {
+//        cout << cnt << " "; 
+//        continue; 
+//        
+//    }
+//    if(cnt % 4 == 0 && cnt % 3 == 0) {
+//        cout << cnt << " "; 
+//    }
+//    
+//
+//}
+return 0;
 
 }
 
