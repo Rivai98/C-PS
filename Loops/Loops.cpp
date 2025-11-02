@@ -331,6 +331,27 @@ int main()
 //
 //
 //}
+// 
+// 
+// another answer 
+// 
+//int N;
+
+//cin >> N;
+//
+//int pos = 0;
+//
+//while (pos < N) {
+//    string str;
+//    cin >> str;
+//
+//    // there are 8 different ways to make 2 letters no in lower/upper cases
+//    if (str == "no" || str == "No" || str == "nO" || str == "NO" ||
+//        str == "on" || str == "oN" || str == "On" || str == "ON")
+//        cout << str << " ";
+//
+//    pos++;
+//}
 //================================================================///
 ///
 
@@ -349,33 +370,284 @@ int main()
 
 
 //=====================================================///
+//Problem #3: Multiplication table
+//● Read an integer N and M, then print NxM lines for their multiplication table.
+//● Input 3 4
+//int n, m; 
+//cin >> n >> m; 
+//int cnt = n ; 
+//int first_number = 1   ,second_number ;
+//while (cnt--) {
+//
+//    
+//    second_number = 1; 
+//    while (second_number <= m) {    
+//        cout << first_number << " x " << second_number << " = " << first_number * second_number << '\n';
+//        second_number++; 
+//    }
+//
+//    cout << "\n"; 
+//    first_number++; 
+//   
+//
+//}
 
-int n, m; 
-cin >> n >> m; 
-int cnt = n ; 
-int first_number = 1   ,second_number ;
-while (cnt--) {
 
-    
-    second_number = 1; 
-    while (second_number <= m) {    
-        cout << first_number << " x " << second_number << " = " << first_number * second_number << '\n';
-        second_number++; 
+/*Practice: Special Sum
+● Read T for number of test cases.For each test case read integer N : number
+of numbers.Then read N numbers a, b, c, ….. and compute the sum of :
+○(a, b * b, c * c * c, d * d * d * d, e * e * e * e * e……)
+○ That is the k - th number is repeated k times
+*/
+//int T; 
+//cin >> T; 
+//while (T--) {
+//    int n, number, index= 0 ,sum = 0 , result= 1 ;
+//    cin >> n; 
+//    while (n--) {
+//        cin >> number;
+//        if (index == 0) {
+//            sum += number; 
+//        }
+//        else {
+//            int cnt = 0; 
+//            while (cnt <= index) {
+//                
+//                result *=  number;
+//                cnt++; 
+//            }
+//           
+//            sum += result;
+//            result = 1; 
+//        }
+//        index++;
+//        
+//       
+//    }
+//    cout << sum; 
+
+//int T , value ,sum=0, result= 1 ; 
+//cin >> T; 
+//while(T--){
+//    int n; 
+//    cin >> n; 
+//    for (int i = 0; i < n; i++) { 
+//        cin >> value;
+//        int result = 1; 
+//        for (int j = 0; j < i + 1; j++) 
+//            result *= value; 
+//        
+//
+//        sum += result; 
+//        
+//
+//
+//    }
+//    cout << sum;
+//
+//
+//}
+
+
+/*
+Practice: Pair of numbers
+● Read N, M, SUM.Find all pairs that has
+A + B == SUM where
+○ 1 <= A <= N
+○ 1 <= B <= M
+*/
+//int n, m, sum,cnt=0; cin >> n >> m >> sum; 
+//
+//for (int i = 1; i <= n; i++) {
+//    int j = sum - i; //sum = i + j 
+//    if (j >= 1 && j <= m) {
+//        cnt++; 
+//    }
+//
+//
+//
+//}
+//cout << cnt; 
+//=======================================
+/*Practice: Triples of numbers
+● Read N, M, W.Find all triples that has
+A + B <= C where
+○ 1 <= A <= N
+○ A <= B <= M
+○ 1 <= C <= W*/
+//int n; 
+//cin >> n; 
+//int a = 0 , b = 1  ,sum  ; 
+//for (int i = 0 ; i < n; i++ ) {
+//
+//    if (i == 0) {
+//        cout << a << " " << b << " ";
+//
+//    }
+//    sum = a + b; 
+//  
+//    cout << sum<<" ";
+//    a = b; 
+//    b = sum; 
+//    
+//
+//
+//
+//
+//
+//
+//   
+//
+//
+//
+//}
+
+//int n; 
+//cin >> n; 
+//
+//for (int i = 0; i < n; i++) {
+//    for (int j = 0 ; j < n; j++) {
+//        if (j == i || j == n - i - 1) {
+//            cout << "*"; 
+//        }
+//        else {
+//            cout << " "; 
+//        }
+//
+//    }
+//    cout << "\n"; 
+//}
+
+//int cnt = 0; 
+//for (int x = 50 ; x <= 300 ; x++) {
+//
+//    for (int y = 70; y <= 400; y++) {
+//        if (x < y && (x+y)% 7 == 0 ) {
+//            cnt++; 
+//
+//        }
+//
+//   }
+//    
+//}
+//cout << cnt; 
+
+////===========================another solve =================///
+
+
+/*
+     Count how many (a, b, c, d) with following property:
+     ○ 1 <= a, b, c, d <= 200
+     ○ a + b = c + d
+*/
+//int cnt = 0; 
+//for (int a = 1; a <= 200; a++) {
+//    for (int b = 1; b <= 200; b++) {
+//        for (int c = 1; c <= 200; c++) {
+//            int d = a+b-c; 
+//            if (d >= 1 && d <= 200) {
+//                cnt++;
+//            }
+//            
+//
+//        }
+//    }
+//
+//}
+//cout << cnt; 
+
+
+
+/*===================another solution=============================*/
+
+//int cnt = 0;
+//for (int a = 1; a <= 200; a++) {
+//    for (int b = 1; b <= 200; b++) {
+//        for (int c = 1; c <= 200; c++) {
+//            for (int d = 1; d <= 200; d++) {
+//                if ((a + b) == (c + d)) {
+//                    cnt++; 
+//                }
+//           }
+//
+//        }
+//    }
+//
+//}
+//cout << cnt;
+
+/*=====================================================*/
+//Read integer N(< 500), then print all prime numbers <= N
+//    ○ Output should be comma separated, as below
+//    ■ Don’t print comma after the last number
+//    ● Input ⇒ Output
+//    ○ 18 ⇒ 2, 3, 5, 7, 11, 13, 17
+//    ■ No comma after last number!
+/*=======================================================*/
+
+//int n; 
+//cin >> n; 
+//bool first_print = true; 
+//for (int i = 2; i <= n; i++) {
+//    bool notPrime = false;
+//    for (int j = 2; j <= n; j++) {
+//        if (i % j == 0 && i != j  ) {
+//            notPrime = true; 
+//            break; 
+//        }
+//
+//    }
+//    if (!notPrime) { 
+//        if (!first_print)
+//            cout << ","; 
+//        cout << i;
+//        first_print = false; 
+//
+//
+//    }
+//}
+
+
+/*================================================*/
+
+
+/*
+Homework 6:
+Digits sum in range
+ ● Read three numbers N, A, B. Print the summation of the numbers between 1
+and N whose sum of digits is between A and B.
+ ● Input / Output
+ ○ 20 2 5 ⇒ 84
+ ■ Numbers whose sums of digits are between 2 and 5, are: 2,3,4,5,11,12,13,14, 20.
+ ● E.g. digits sum of 13 is 4 : which is between (2, 5)
+ ○ 10 1 2 ⇒ 13
+ ○ 100 4 16 ⇒ 4554
+
+*/
+int n, a, b; 
+cin >> n >> a >> b; 
+int sum = 0;
+int sum_digits = 0; 
+int digit ,div; 
+
+for (int i = 1; i <= n; i++) {
+    div = i;
+    while (div > 0 ) {
+        
+        digit = div%10;
+        div /= 10; 
+        sum_digits+= digit;
+
     }
+    if (sum_digits >= a && sum_digits <= b) {
+        sum += i; 
+    }
+    sum_digits = 0; 
 
-    cout << "\n"; 
-    first_number++; 
-   
+
 
 }
-
-
-
-
-
-
-
-
+cout << sum; 
 
 
 return 0;
