@@ -1,0 +1,47 @@
+# --- Build directories ---
+build/
+Build/
+out/
+bin/
+obj/
+cmake-build-*/
+CMakeFiles/
+
+# --- Compiled artifacts ---
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# --- CMake generated ---
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# --- IDE/editor ---
+.vs/
+.idea/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+.vscode/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Logs/temp ---
+*.log
+*.tmp
+*.bak
+*.swp
+core
+core.*
